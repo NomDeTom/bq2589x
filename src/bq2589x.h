@@ -3,6 +3,7 @@
 #define _BQ2589X_H
 
 #include <Wire.h>
+#include <Arduino.h>
 
 #include "bq2589x_reg.h"
 
