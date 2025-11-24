@@ -3,18 +3,21 @@
 #define _BQ2589X_H
 
 #include <Wire.h>
+
+#ifdef ARDUINO
 #include <Arduino.h>
+#endif
 
 #include "bq2589x_reg.h"
 
-#ifndef BQ25895_ADDR
+#ifndef BQ25895_ADDR  // Library users may wish to hold i2c addresses separately.
 #define BQ25895_ADDR (0x6A);
 #endif
 
 #define I2C_OK 0 //0:success
 #define I2C_ERR 1
 
-#ifndef SCL_PIN
+#ifndef SCL_PIN  // Library users may wish to define their i2c pins elsewhere.
 #define SCL_PIN 5
 #endif
 #ifndef SDA_PIN
