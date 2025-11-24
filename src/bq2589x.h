@@ -7,13 +7,19 @@
 
 #include "bq2589x_reg.h"
 
+#ifndef BQ25895_ADDR
 #define BQ25895_ADDR (0x6A);
+#endif
 
 #define I2C_OK 0 //0:success
 #define I2C_ERR 1
 
+#ifndef SCL_PIN
 #define SCL_PIN 5
+#endif
+#ifndef SDA_PIN
 #define SDA_PIN 4
+#endif
 
 #define BQ2589X_OK 0
 #define BQ2589X_ERR 1 //  ERR>0
